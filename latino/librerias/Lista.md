@@ -167,4 +167,93 @@ escribir(lista.encontrar(mensaje, "Latino"))     //Devolverá 2, ya que el índi
 
 ### lista.extender()
 ---------------------
-El comando **lista.extender( )** copiará los elementos de una lista para ser insertados al final de otra
+El comando **lista.extender()** copiará los elementos de una lista para ser insertados al final de otra lista deseada.
+
+**Ejemplo de sintaxis**
+
+```python
+lista.extender("ListaAExtender", "ListaACopiar")
+```
+
+**Ejemplo de uso**
+
+```python
+mensaje = ["Hola", "mundo"]
+copiar = ["Latino", "es lo máximo!"]
+lista.extender(mensaje, copiar)
+escribir(mensaje)  # Devolverá ["Hola", "mundo", "Latino", "es lo máximo!"]
+```
+
+----
+
+### lista.insertar()
+
+Con este comando podemos insertar un elementos en cualquier índice deseado de una lista.
+
+**Ejemplo de sintaxis**
+
+```python
+lista.insertar(listaOriginal, elementoNuevo, indice)
+```
+
+**Ejemplo de uso**
+
+```python
+mensaje = ["Hola", "mundo", "Latino"]
+lista.insertar(mensaje, "Lenguaje", 2)
+escribir(mensaje)  # Devolverá ["Hola", "mundo", "Lenguaje", "Latino"]
+```
+
+----
+
+### lista.invertir()
+
+Para invertir el orden de una lista, utilizamos el comando **lista.invertir()**.
+
+**Ejemplo de uso**
+
+```python
+carros = ["Toyota", "Ford", "Peugeot", "Nissan", "Subaru", "Chevrolet"]
+escribir(lista.invertir(carros))  # Devolverá la lista en orden invertido
+```
+
+----
+
+### lista.longitud()
+
+Este comando devuelve la cantidad de elementos de una lista.
+
+**Ejemplo de uso**
+
+```python
+mensaje = ["Hola", "mundo", "Latino"]
+escribir(lista.longitud(mensaje))  # Devolverá "3"
+```
+
+----
+
+### lista.separar()
+
+El comando **lista.separar()** nos permite separar cada elemento de la lista con un separador asignado.
+
+El separador debe ser declarado dentro de comillas.
+
+Por defecto si no se indica un separador este será sustituido por un espacio en blanco.
+
+**Ejemplo de sintaxis**
+
+```python
+lista.insertar(lista, separador)
+```
+
+**Ejemplo de uso**
+
+```python
+mensaje = ["Hola", "mundo", "Latino"]
+escribir(lista.separar(mensaje, "-"))  # Devolverá Hola-mundo-Latino
+escribir(lista.separar(mensaje, ".."))  # Devolverá Hola..mundo..Latino
+escribir(lista.separar(mensaje, "_"))  # Devolverá Hola_mundo_Latino
+escribir(lista.separar(mensaje, ""))  # Devolverá HolamundoLatino
+escribir(lista.separar(mensaje))  # Devolverá Hola mundo Latino
+```
+```
