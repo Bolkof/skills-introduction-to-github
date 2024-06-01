@@ -22,7 +22,7 @@ La librería **lista** contiene las funciones para el manejo de [lista](#listaLi
 | insertar()           | 3          | Inserta un nuevo elemento a una lista                  |
 | invertir()           | 1          | Invierte el orden de la lista                          |
 | longitud()           | 1          | Devuelve la cantidad de elementos de una lista         |
-| separador()          | 2          | Separa los elementos de una lista                      |
+| separadar()          | 2          | Separa los elementos de una lista                      |
 
 ----
 
