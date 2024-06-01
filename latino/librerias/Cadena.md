@@ -292,3 +292,53 @@ escribir(cadena.insertar(x, y, 10))     //Devolverá Hola mundo Latino, como est
 ----
 
 ## cadena.invertir
+---------------------
+Este comando nos permite **invertir** el orden de la cadena.
+
+```latino
+x = "Hola mundo, como estan?"
+escribir(cadena.invertir(x))     //Devolverá ?natse omoc ,odnum aloH
+```
+
+cadena.longitud()
+---------------------
+Este comando retorna la **longitud** de la cadena en dígitos.
+
+El comando comienza a contar desde el número **uno (1)** como primer número en adelante.
+
+```latino
+x = "Hola mundo, como estan?"
+escribir(cadena.longitud(x))     //Devolverá 23
+```
+
+cadena.mayusculas()
+-----------------------
+Este comando nos permite **transformar** toda nuestra cadena a letras **mayúsculas**.
+
+```latino
+x = "hola mundo"
+escribir(cadena.mayusculas(x))     //Devolverá HOLA MUNDO
+```
+
+cadena.minusculas()
+-----------------------
+Este comando nos permite **transformar** toda nuestra cadena a letras **minúsculas**.
+
+```latino
+x = "HOLA MUNDO"
+escribir(cadena.minusculas(x))     //Devolverá hola mundo
+```
+
+cadena.recortar()
+---------------------
+Este comando **elimina** cualquier **carácter de espacio** al inicio y al final de la cadena, ya sea espacio en blanco o tabulación.
+
+```latino
+x = "     Hola mundo"
+escribir(cadena.recortar(x))     //Devolverá Hola mundo
+```
+Enlaces
+
+- valor ASCII: [ASCII](https://es.wikipedia.org/wiki/ASCII)
+- valores ASCII: [ASCII](https://es.wikipedia.org/wiki/ASCII)
+```
