@@ -1,4 +1,4 @@
-```markdown
+
 [incluirLink](#incluirLink)
 
 # Función incluir( )
@@ -40,4 +40,3 @@ incluir("carpeta/modulo")     // Unix
 Una [librería](https://es.wikipedia.org/wiki/Biblioteca_(informática)) es un conjunto de módulos que nos proporciona una serie de funciones/métodos muy concretos que nos ayudan a simplificar tareas complejas y no perjudica la estructura de nuestro código.
 
 A diferencia de los módulos en Latino, las librerías no requieren ser almacenadas en una variable.
-```
