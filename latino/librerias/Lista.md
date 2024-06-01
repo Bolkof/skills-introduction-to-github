@@ -256,4 +256,3 @@ escribir(lista.separar(mensaje, "_"))  # Devolverá Hola_mundo_Latino
 escribir(lista.separar(mensaje, ""))  # Devolverá HolamundoLatino
 escribir(lista.separar(mensaje))  # Devolverá Hola mundo Latino
 ```
-```
