@@ -130,3 +130,165 @@ cadena.ejecutar(x)               // Devolverá Hola mundo
 
 ---
 
+## cadena.eliminar( )
+---------------------
+Este comando solo **elimina la primera coincidencia** encontrada en una cadena de texto.
+
+```latino
+x = "Hola mundo, holahola otra vez"
+escribir(cadena.eliminar(x, "hola"))     //Devolverá Hola mundo, hola otra vez
+```
+
+----
+
+## cadena.encontrar( )
+----------------------
+Este comando **busca** la posición de la primera coincidencia de caracteres o textos.
+
+Este comando también dispone de un alias **cadena.indice( )**.
+
+El comando **cadena.encontrar( )** cuenta cada carácter de una cadena de texto hasta encontrar la primera coincidencia.
+
+El comando comienza a contar desde el número **cero (0)** como primer número en adelante.
+
+Si el texto o cadena no fue encontrado, entonces devolverá **-1**.
+
+```latino
+x = "Hola mundo latino, como estan?"
+escribir(cadena.encontrar(x, "como"))     //Devolverá 19
+```
+
+----
+
+## cadena.es_alfa( )
+--------------------
+Este comando **comprueba** si la cadena solo contiene valores **alfanuméricos** y NO símbolos.
+
+El comando **cadena.es_alfa( )** devolverá un valor buleano:
+
+  * **verdadero** si la cadena es letras y/o números.
+  * **falso** si la cadena contiene o es un símbolo.
+
+```latino
+escribir(cadena.es_alfa("1"))          //Devolverá verdadero
+escribir(cadena.es_alfa("a"))          //Devolverá verdadero
+escribir(cadena.es_alfa("&"))          //Devolverá falso
+escribir(cadena.es_alfa("#"))          //Devolverá falso
+escribir(cadena.es_alfa("Hola"))       //Devolverá verdadero
+escribir(cadena.es_alfa("Hola++"))     //Devolverá falso
+```
+
+----
+
+## cadena.es_igual( )
+---------------------
+Este comando **comprueba** si ambas cadenas **coinciden entre sí** y regresa un valor buleano.
+
+```latino
+escribir(cadena.es_igual("hola", "HOLA"))     //Devolverá falso
+escribir(cadena.es_igual("hola", "hola"))     //Devolverá verdadero
+```
+
+----
+
+## cadena.es_numero( )
+----------------------
+Este comando **comprueba** si la cadena **solo contiene números** y devolverá un valor buleano.
+
+Este comando también dispone de un alias **cadena.es_numerico( )**.
+
+```latino
+escribir(cadena.es_numerico("123456"))     //Devolverá verdadero
+escribir(cadena.es_numerico("1234f"))      //Devolverá falso
+escribir(cadena.es_numerico("hola24"))     //Devolverá falso
+escribir(cadena.es_numerico("123$%"))      //Devolverá falso
+```
+
+----
+
+## cadena.esta_vacia( )
+-----------------------
+Este comando **verificar** que la cadena está vacía.
+
+El comando **cadena.esta_vacia( )** devolverá un valor buleano:
+
+  * **verdadero** si la cadena esta vacía.
+  * **falso** si la cadena NO esta vacía.
+
+```latino
+escribir(cadena.esta_vacia(""))      //Devolverá verdadero
+escribir(cadena.esta_vacia("a"))     //Devolverá falso
+```
+
+----
+
+## cadena.formato( )
+--------------------
+Este comando permite **dar formato** a un carácter o valor ASCII.
+
+Este comando es similar al comando **imprimirf( )**, aunque este último requiere del carácter **\\n** para poder escribir en pantalla.
+
+El comando **cadena.formato( )** opera con los siguientes formatos:
+
+  * **\%c**, convierte a un carácter el valor ASCII.
+  * **\%i**, convierte a un número enteros.
+  * **\%f**, convierte a un número decimal.
+  * **\%d**, convierte a un número.
+  * **\%o**, convierte a un valor octal.
+  * **\%x**, convierte a un hexadecimal.
+  * **\%e**, convierte a una expresión científica.
+  * **\%s**, convierte a carácter o a una cadena de texto.
+  * **\%%**, Devuelve el símbolo de **porcentaje (\%)**.
+
+```latino
+x = "hola"
+escribir(cadena.formato("%c",x))                //Devolverá h
+escribir(cadena.formato("%i",x))                //Devolverá 104
+escribir(cadena.formato("%f",x))                //Devolverá 104.000000
+escribir(cadena.formato("%d",x))                //Devolverá 104
+escribir(cadena.formato("%o",x))                //Devolverá 150
+escribir(cadena.formato("%x",x))                //Devolverá 68
+escribir(cadena.formato("%e",x))                //Devolverá 5.556763e-307
+escribir(cadena.formato("%s",x))                //Devolverá hola
+escribir(cadena.formato("%%",x))                //Devolverá %
+escribir(cadena.formato("%c",75))               //Devolverá K
+escribir(cadena.formato("%c%c%c",75,76,77))     //Devolverá KLM
+```
+
+----
+
+## cadena.inicia_con( )
+-----------------------
+A diferencia del comando **cadena.termina_con( )**, este comando **comprueba** si la cadena de texto **inicia con** un carácter especificado, y este devolverá un valor buleano.
+
+Este comando distingue entre **mayúsculas** y **minúsculas**.
+
+```latino
+x = "Hola mundo"
+escribir(cadena.inicia_con(x, "H"))     //Devolverá verdadero
+escribir(cadena.inicia_con(x, "h"))     //Devolverá falso
+```
+
+----
+
+## cadena.insertar( )
+---------------------
+Este comando nos permite **añadir** una cadena a otra cadena de texto en cualquier posición especificada.
+
+La posición se maneja contando cada carácter de la cadena original. Este conteo inicia desde el número **cero (0)** como primer número en adelante.
+
+**Ejemplo de sintaxis**
+
+```bash
+cadena.insertar(cadena_original, cadena_a_agregar, la_posición)
+```
+
+```latino
+x = "Hola mundo, como estan?"
+y = " Latino"
+escribir(cadena.insertar(x, y, 10))     //Devolverá Hola mundo Latino, como estan?
+```
+
+----
+
+## cadena.invertir
