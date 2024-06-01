@@ -328,7 +328,6 @@ Este comando nos permite **transformar** toda nuestra cadena a letras **minúscu
 x = "HOLA MUNDO"
 escribir(cadena.minusculas(x))     //Devolverá hola mundo
 ```
-
 cadena.recortar()
 ---------------------
 Este comando **elimina** cualquier **carácter de espacio** al inicio y al final de la cadena, ya sea espacio en blanco o tabulación.
@@ -337,6 +336,175 @@ Este comando **elimina** cualquier **carácter de espacio** al inicio y al final
 x = "     Hola mundo"
 escribir(cadena.recortar(x))     //Devolverá Hola mundo
 ```
+**Error:** Por el momento en Latino 1.2.0 en la librería **cadena**, la función **cadena.recortar()** no funciona correctamente en MS-Windows. Espere a futuros lanzamientos de Latino para ver sus novedades.
+
+----
+
+cadena.reemplazar()
+-----------------------
+Este comando nos permite **cambiar** una palabra por otra en una cadena.
+
+**Ejemplo de sintaxis**
+
+```bash
+(cadena_original, texto_a_reemplazar, texto_nuevo, posición)
+```
+
+**Nota:** Este comando cambia el texto seleccionado por el nuevo texto asignado, **mas no lo guarda**. Para guardar el cambio es recomendable asignarlo a una variable.
+
+```latino
+x = "Hola mundo HTML"
+y = cadena.reemplazar(x, "HTML", "Latino", 12)     //Asignamos en una variable el nuevo texto
+escribir(x)                                        //Devolverá Hola mundo HTML
+escribir(y)                                        //Devolverá Hola mundo Latino
+```
+
+----
+
+cadena.regex()
+------------------
+Este comando hace uso de las **Expresiones Regulares** o **RegEx** para hacer una **búsqueda avanzada** y retorna una lista con cada una de las coincidencias.
+
+Para aprender más sobre este comando y las expresiones regulares, mire el artículo de RegEx, [aquí](regexLink).
+
+```latino
+x = "Hola mundo, Latino"
+escribir(cadena.regex(x, "o"))     //Devolverá [["o"], ["o"], ["o"]]
+```
+
+----
+
+cadena.regexl()
+--------------------
+Este comando es conocido como **regex lógico**.
+
+Este comando hace uso de las **Expresiones Regulares** o **RegEx** para hacer una **búsqueda avanzada** y retorna **verdadero** si encuentra la coincidencia y **falso** si no la encontró.
+
+Para aprender más sobre este comando y las expresiones regulares, mire el artículo de RegEx, [aquí](regexLink).
+
+```latino
+//Busca si la cadena termina con "Latino"
+x = "Hola mundo, Latino"
+escribir(cadena.regexl(x, "Latino$"))     //Devolverá verdadero
+```
+
+----
+
+cadena.rellenar_derecha()
+-----------------------------
+Este comando nos permite **añadir al final** de la cadena especificada un texto o cadena.
+
+El comando **cadena.rellenar_derecha()** nos permite indicar la cantidad de veces que deseamos que se repita el nuevo texto a añadir.
+
+**Ejemplo de sintaxis**
+
+```bash
+cadena.rellenar_derecha(cadena_original, cadena_a_agregar, long_cadena_original + cantidad_de_repeticiones(Valor numérico))
+```
+
+```latino
+/*
+El no.19 es la longitud de la cadena_original más la cantidad de repeticiones que deseamos,
+en este caso indicamos que sean dos veces
+*/
+x = "Hola mundo, Latino"
+y = " que tal?"
+escribir(cadena.rellenar_derecha(x,y,19))     //Devolverá Hola mundo, Latino que tal? que tal?
+```
+
+----
+
+cadena.rellenar_izquierda()
+-------------------------------
+Este comando nos permite **añadir al inicio** de la cadena especificada un texto o cadena.
+
+El comando **cadena.rellenar_izquierda()** nos permite indicar la cantidad de veces que deseamos que se repita el nuevo texto a añadir.
+
+**Ejemplo de sintaxis**
+
+```bash
+cadena.rellenar_izquierda(cadena_original, cadena_a_agregar, long_cadena_original + cantidad_de_repeticiones(Valor numérico))
+```
+
+```latino
+/*
+El no.14 es la longitud de la cadena_original más la cantidad de repeticiones que deseamos,
+en este caso indicamos que sean dos veces
+*/
+x = "mundo, Latino"
+y = "hola "
+escribir(cadena.rellenar_izquierda(x,y,14))     //Devolverá hola hola mundo, Latino
+```
+
+----
+
+cadena.separar()
+--------------------
+Este comando nos permite **segmentar** una cadena de texto al especificar un separador y el resultado lo devuelve en una lista.
+
+El separador debe ser especificado **dentro de comillas**.
+
+Si no se le asigna un separador, por defecto buscará los espacios en blanco.
+
+**Ejemplo de sintaxis**
+
+```bash
+cadena.separar(cadena_original, separador)
+```
+
+```latino
+x = "Hola-mundo-Latino-que tal-estan-todos?"
+escribir(cadena.separar(x,"-"))     //Devolverá ["Hola","mundo","Latino","que tal","estan","todos?"]
+```
+
+----
+
+cadena.subcadena()
+----------------------
+Este comando **copia** de una cadena el texto deseado el cual se define indicando **en donde inicia** y la **longitud** que deseamos que tenga el texto a copiar.
+
+La **posición_inicial** comienza a contar desde el número **cero (0)** en adelante.
+
+La **longitud** comienza a contar desde el número **uno (1)** en adelante.
+
+**Ejemplo de sintaxis**
+
+```bash
+cadena.subcadena(cadena_original, posición_inicial(número), longitud(número))
+```
+
+```latino
+x = "Hola mundo Latino que tal estan todos?"
+escribir(cadena.subcadena(x,5,12))     //Devolverá mundo Latino
+```
+
+----
+
+cadena.termina_con()
+------------------------
+A diferencia del comando **cadena.inicia_con**, este comando nos permite **buscar** en una cadena de texto si esta **termina con** un carácter especificado y devuelve un valor booleano.
+
+Este comando distingue entre **mayúsculas** y **minúsculas**.
+
+```latino
+x = "Hola mundo"
+escribir(cadena.termina_con(x, "O"))     //Devolverá falso
+escribir(cadena.termina_con(x, "o"))     //Devolverá verdadero
+```
+
+----
+
+cadena.ultimo_indice()
+--------------------------
+Este comando devuelve la **última posición encontrada** del carácter especificado.
+
+Este comando comienza a contar desde el número **cero (0)** en adelante.
+
+```latino
+x = "Hola mundo"
+escribir(cadena.ultimo_indice(x, "u"))     //Devolverá 6
+```
+
 Enlaces
 
 - valor ASCII: [ASCII](https://es.wikipedia.org/wiki/ASCII)
